@@ -12,12 +12,12 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-const-assign": "warn",
-        "no-this-before-super": "warn",
-        "no-undef": "warn",
-        "no-unreachable": "warn",
-        "no-unused-vars": "warn",
-        "constructor-super": "warn",
-        "valid-typeof": "warn"
+        "no&#45;const&#45;assign": "warn",
+        "no&#45;this&#45;before&#45;super": "warn",
+        "no&#45;undef": "warn",
+        "no&#45;unreachable": "warn",
+        "no&#45;unused&#45;vars": "warn",
+        "constructor&#45;super": "warn",
+        "valid&#45;typeof": "warn"
     }
 }
