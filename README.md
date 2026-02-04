@@ -1,23 +1,37 @@
 # Resume Website
 
-This project is a simple resume website that showcases the professional profile, skills, experience, and education of Andrea Kaplen. The website is structured using HTML5 and styled with CSS to provide a clean and modern presentation.
+A simple, static resume website for Andrea Kaplen built with HTML and CSS. The site is generated from an XHTML export and includes a small script to export the main content to PDF.
 
-## Project Structure
+## Project description
 
-```
-resume&#45;website
-├── index.html       # The main HTML file containing the resume content
-├── styles.css       # The CSS file for styling the resume website
-└── README.md        # This README file
-```
+A lightweight, static resume site generated from an XHTML export and styled for screen and print. The site presents skills and experience with badge-style UI, includes a print stylesheet, and supports client-side PDF export using the [`html2pdf`](scripts/index.js) integration. Key files:
+- Main page: [index.html](index.html)
+- Alternate export: [Andrea_Resume_2026Feb.html](Andrea_Resume_2026Feb.html)
+- Styles: [styles/style.css](styles/style.css), [styles/print.css](styles/print.css)
+- Scripts: [scripts/index.js](scripts/index.js) (`downloadPdf` button logic)
 
-## How to View the Resume Website
+Use this repo to view, customize, or export the resume as PDF.
 
-1. Clone or download the repository to your local machine.
-2. Navigate to the `resume&#45;website` directory.
-3. Open the `index.html` file in a web browser to view the resume.
+## Contents
 
-## Additional Notes
+- [index.html](index.html) — main resume page (XHTML)
+- [Andrea_Resume_2026Feb.html](Andrea_Resume_2026Feb.html) — alternate/archived export
+- styles/
+  - [style.css](styles/style.css) — site styles
+  - [print.css](styles/print.css) — print-specific styles
+- scripts/
+  - [index.js](scripts/index.js) — small DOM helpers and html2pdf integration
+- README.md — this file
 
-&#45; The website is responsive and should display well on both desktop and mobile devices.
-&#45; Feel free to customize the content and styles to better fit your personal branding or preferences.
+## How to view
+
+1. Open `index.html` in a browser.
+2. Or run a local static server from the project root:
+
+   ```sh
+   python3 -m http.server 8000
+   # then open http://localhost:8000/index.html
+
+# Acknowledgements
+
+- This project used GitHub Copilot for AI-assisted development.

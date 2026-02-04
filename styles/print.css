@@ -1,0 +1,17 @@
+/* Print stylesheet: hide navigation/header, simplify layout */
+@media print {
+  body { color: #000; background: #fff; }
+  .skip-link { display: none !important; }
+  header, .last-job .edit-controls, footer { display: none; }
+  main { width: 100%; }
+  section { page-break-inside: avoid; }
+  a::after { content: " (" attr(href) ")"; }
+  /* ensure full width for printing */
+  body { max-width: 100% !important; margin: 0.5cm; color: #000; background: #fff; }
+  /* avoid heavy backgrounds if printer cannot print colors */
+  .table-header, .table-Table2, .cell-Table3_A1, .cell-Table4_A1 { background: none !important; color: #000 !important; }
+  /* show link URLs in print */
+  a::after { content: " (" attr(href) ")"; font-weight: normal; }
+  /* keep page breaks reasonable */
+  h2, h3 { page-break-after: avoid; page-break-inside: avoid; }
+}
