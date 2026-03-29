@@ -1,17 +1,79 @@
-/* Print stylesheet: hide navigation/header, simplify layout */
 @media print {
-  body { color: #000; background: #fff; }
-  .skip-link { display: none !important; }
-  header, .last-job .edit-controls, footer { display: none; }
-  main { width: 100%; }
-  section { page-break-inside: avoid; }
-  a::after { content: " (" attr(href) ")"; }
-  /* ensure full width for printing */
-  body { max-width: 100% !important; margin: 0.5cm; color: #000; background: #fff; }
-  /* avoid heavy backgrounds if printer cannot print colors */
-  .table-header, .table-Table2, .cell-Table3_A1, .cell-Table4_A1 { background: none !important; color: #000 !important; }
-  /* show link URLs in print */
-  a::after { content: " (" attr(href) ")"; font-weight: normal; }
-  /* keep page breaks reasonable */
-  h2, h3 { page-break-after: avoid; page-break-inside: avoid; }
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+  }
+
+  .skip-link,
+  .resume-nav,
+  .btn-resume {
+    display: none !important;
+  }
+
+  .site-header {
+    padding-bottom: 0 !important;
+  }
+
+  .hero-panel,
+  .content-card,
+  .skill-group,
+  .summary-pill,
+  .course-list .list-group-item {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .hero-panel {
+    padding: 0 !important;
+    border: 0 !important;
+    display: block !important;
+  }
+
+  .hero-actions {
+    padding: 0 !important;
+    margin-top: 1rem;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .contact-list a,
+  a {
+    color: #000 !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+  }
+
+  .tab-content > .tab-pane {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  .tab-content > .tab-pane + .tab-pane {
+    margin-top: 1.5rem;
+  }
+
+  .experience-entry,
+  .education-entry,
+  .content-card,
+  .skill-group,
+  .course-group,
+  .summary-pill {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .site-footer {
+    border-top: 0 !important;
+    background: transparent !important;
+  }
 }

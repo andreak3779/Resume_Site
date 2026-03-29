@@ -2,364 +2,354 @@
 <html lang="en">
 
 <head>
-  <title>Andrea Kaplen Resume</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <!-- Bootstrap CSS v5.2.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andrea Kaplen | Resume</title>
+  <meta name="description"
+    content="Andrea Kaplen resume site featuring full-stack development experience, technical skills, education, and completed Pluralsight training." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles/style.css" type="text/css" />
-  <link rel="stylesheet" href="styles/print.css" type="text/css" media="print" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/print.css" media="print" />
 </head>
 
 <body>
-  <header>
-    <div class="d-flex flex-column">
-      <div class="row">
-        <div class="col">
-          <h3 class="text-start fw-bold p-2">Andrea Kaplen</h3>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container py-4 py-lg-5">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow mb-2">Resume Site</p>
+          <h1 class="display-5 fw-semibold mb-2">Andrea Kaplen</h1>
+          <p class="hero-tagline mb-3">Technology expert who solves business problems</p>
+          <p class="hero-title mb-0">Full-Stack Developer | Enterprise Applications | 10+ Years</p>
         </div>
-        <div class="col">
-          <h4 class="text-end fw-lighter p-2">Technology expert who solves business problems</h4>
+        <div class="hero-actions">
+          <ul class="contact-list list-unstyled mb-3">
+            <li><a href="mailto:andreakaplen1973@gmail.com">andreakaplen1973@gmail.com</a></li>
+            <li><a href="tel:+12049517816">204 951-7816</a></li>
+            <li><a href="https://www.linkedin.com/in/andrea3779/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/andreak3779" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+          <button id="printResume" class="btn btn-resume" type="button">Print / Save PDF</button>
         </div>
       </div>
+
+      <nav class="resume-nav mt-4" aria-label="Resume sections">
+        <ul class="nav nav-tabs" id="resumeTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-pane" type="button"
+              role="tab" aria-controls="home-pane" aria-selected="true">Home</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-pane" type="button"
+              role="tab" aria-controls="skills-pane" aria-selected="false">Skills</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience-pane" type="button"
+              role="tab" aria-controls="experience-pane" aria-selected="false">Experience</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-pane" type="button"
+              role="tab" aria-controls="education-pane" aria-selected="false">Education</button>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
-          role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience-tab-pane"
-          type="button" role="tab" aria-controls="experience-tab-pane" aria-selected="false">Experience</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane"
-          type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Education and
-          Training</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="links-tab" data-bs-toggle="tab" data-bs-target="#links-tab-pane" type="button"
-          role="tab" aria-controls="links-tab-pane" aria-selected="false">Links</button>
-      </li>
-    </ul>
   </header>
-  <main>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-        <div class="card w-75 p-4 margin-top-2">
-          <h5 class="card-title">Developer | Enterprise Applications | 10+ Years</h5>
-        </div>
 
-        <div class="card w-60 p-4">
-          Integrated enterprise systems by developing API connections between Microsoft Dynamics 365, HubSpot,
-          QuickBooks, SharePoint, and Power Platform to automate workflows and improve data flow
-        </div>
-        <div class="card w-60 p-4">Managed database solutions including design, performance tuning, stored procedures,
-          and
-          automation using MS SQL Server, DB2, MySQL, SSIS, and SSRS </div>
-        <div class="card w-60 p-4">Implemented DevOps practices by building and managing CI/CD pipelines with Azure
-          DevOps, GitLab, Octopus Deploy, and Git for automated testing and deployment </div>
-        <div class="card w-60 p-4">Collaborated in Agile teams using Scrum methodology, Jira, and Azure DevOps Boards to
-          deliver projects with cross-functional, distributed teams </div>
-        <div class="card w-60 p-4">Actively developing skills in Angular 18+, Reactive Programming (RxJS, Signals),
-          Python testing frameworks, and AI-assisted development with GitHub Copilot</div>
-      </div>
-      <div class="tab-pane fade" id="experience-tab-pane" role="tabpanel" aria-labelledby="experience-tab" tabindex="0">
-        <div class="card w-75 p-4 margin-top-2">
-          <h5 class="text-start fw-bold">Professional Experience</h5>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Professional Development & Portfolio Building</h5>
-            <h6 class="card-subtitle text-muted">2025 May – Present</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item ">Developed expertise in Angular v18+ including RxJS, Signals, Angular CLI, and
-                Reactive Programming through Pluralsight training and hands-on code sample development</li>
-              <li class="list-group-item">Advanced Python programming skills with venv, pytest, and approvaltests
-                through
-                Pluralsight courses and Exercism coding exercisesItem 2</li>
-              <li class="list-group-item">Mastered Test-Driven Development (TDD) and testing strategies including test
-                doubles, peel, and slice techniques through structured coursework and practical application</li>
-              <li class="list-group-item">Leveraged GitHub Copilot as an AI-assisted development tool for code
-                generation,
-                code reviews, documentation, and code quality improvement</li>
-              <li class="list-group-item">Expanded technical portfolio on GitHub with projects demonstrating proficiency
-                in Angular 18+, Python, C#, and ASP.NET Core </li>
-              <li class="list-group-item">Enhanced leadership, mentoring, and communication skills through professional
-                development training</li>
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container pb-5">
+      <div class="tab-content resume-content" id="resumeTabsContent">
+        <section class="tab-pane fade show active" id="home-pane" role="tabpanel" aria-labelledby="home-tab"
+          tabindex="0">
+          <div class="content-card intro-card">
+            <h2 class="section-title">Professional Summary</h2>
+            <ul class="highlight-list">
+              <li>Integrated enterprise systems by building API connections between Microsoft Dynamics 365, HubSpot, QuickBooks, SharePoint, and Power Platform.</li>
+              <li>Managed database solutions including design, performance tuning, stored procedures, and automation using MS SQL Server, DB2, MySQL, SSIS, and SSRS.</li>
+              <li>Implemented DevOps practices with Azure DevOps, GitLab, Octopus Deploy, and Git to support automated testing and deployment.</li>
+              <li>Collaborated in Agile teams using Scrum, Jira, and Azure DevOps Boards to deliver enterprise software with distributed teams.</li>
+              <li>Actively developing skills in Angular v18 stand-alone, RxJS, Signals, Python testing frameworks, and AI-assisted development with GitHub Copilot.</li>
             </ul>
           </div>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Senior Full Stack Developer Johnston Group, Winnipeg, MB </h5>
-            <h6 class="card-subtitle text-muted">2022 Oct – May 2025</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                Participated in Agile/Scrum development using Jira for sprint planning and story pointing; engaged in daily scrums and sprint reviews with cross-functional teams
-              </li>
-              <li class="list-group-item">
-                <p>Built front-end components with Angular (v12-v14), TypeScript, RxJS, and Angular Material; and deployed via Docker and nginx</p>
-              </li>
-              <li class="list-group-item ">Developed RESTful APIs using ASP.NET Core, C#, and Entity Framework with LINQ to query DB2 databases, enhancing performance
-              </li>
-              <li class="list-group-item ">Modernized quote management system by migrating from legacy ASP.NET to Angular
-                12 using a service based architecture; implemented JWT authentication and layered services with C# and Entity Framework
-              </li>
-              <li class="list-group-item ">Created unit and integration tests using xUnit and Moq to ensure code quality
-                and reliability
-              </li>
-              <li class="list-group-item ">Diagnosed and resolved production issues using browser dev tools, logz.io,
-                DB2
-                queries, and .NET debugging tools
-              </li>
-              <li class="list-group-item ">Reduced new developer onboarding time by improving technical documentation and guides in Confluence
-              </li>
-              <li class="list-group-item ">Maintained legacy WinForms application (JG Admin) using C# and .NET 4.8 for bug fixes and report generation
-              </li>
-              <li class="list-group-item ">Conducted code reviews and managed CI/CD deployments through GitLab pipelines
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Software Developer Price Industries Ltd., Winnipeg, MB</h5>
-            <h6 class="card-subtitle text-muted">2019 Sept – 2022 Oct</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item ">
-                Enhanced quality control issue tracking application by implementing improvements to Power Platform
-                Canvas
-                App with Power Automate workflows and SharePoint/M365 integration
-              </li>
-              <li class="list-group-item ">Maintained and supported Price's All-In-One sales engineering system, a
-                desktop
-                application built with C#, Windows Presentation Framework (WPF), .NET 4.8, Entity Framework, and LINQ,
-                hosted on Azure VMs with TFS source control
-              </li>
-              <li class="list-group-item ">Developed API integrations connecting Microsoft Dynamics 365 CRM and HubSpot
-                to
-                Price's All-In-One system using
-                C# .NET Core, REST, HTTP, JSON, JWT, Dataverse, MS Graph, and SharePoint Online, enabling improved order
-                tracking capabilities
-              </li>
-              <li class="list-group-item ">Coordinated release management by managing change requests, and deploying
-                releases through CI/CD pipelines using
-                Azure DevOps Pipeline, Octopus, Git, and TFS
-              </li>
-              <li class="list-group-item ">Managed SharePoint sites for project collaboration and internal
-                communications,
-                configuring and maintaining
-                environments with M365, SharePoint, MS Teams, and PowerShell
-              </li>
-              <li class="list-group-item ">Participated in Agile development team collaborating with cross-functional,
-                geographically dispersed members
-                through MS Teams, SharePoint, and Azure DevOps Boards to achieve business objectives
-              </li>
-              <li class="list-group-item ">Documented system architecture by analyzing and mapping data flows across
-                Power Platform Apps, SharePoint Online Sites, and Power Automate workflows to support system understanding and maintenance
-              </li>
-            </ul>
+          <div class="row g-4 mt-1">
+            <div class="col-lg-4">
+              <div class="content-card stat-card h-100">
+                <p class="stat-label">Focus Areas</p>
+                <p class="stat-value">Enterprise Apps</p>
+                <p class="stat-text mb-0">Full-stack delivery, API integrations, testing, DevOps, and maintainable business software.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="content-card stat-card h-100">
+                <p class="stat-label">Recent Growth</p>
+                <p class="stat-value">Angular + Python</p>
+                <p class="stat-text mb-0">Recent training and portfolio work focused on Angular, reactive programming, Python, GitHub Actions, and Copilot workflows.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="content-card stat-card h-100">
+                <p class="stat-label">Delivery Style</p>
+                <p class="stat-value">Practical + Collaborative</p>
+                <p class="stat-text mb-0">Requirements gathering, troubleshooting, documentation, code reviews, and steady improvement of code quality and workflow reliability.</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Programmer / System Analyst Paul’s Hauling, Winnipeg, MB</h5>
-            <h6 class="card-subtitle text-muted">2019 May – 2019 Aug</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item ">
-                Gathered business requirements and developed reports using SQL Server Reporting Services (SSRS), T-SQL,
-                and MS SQL Server 2012; performed data analysis and collaborated with Trimble (TMT) vendor to
-                investigate
-                and
-                resolve IT issues
-              </li>
-              <li class="list-group-item ">Coordinated software deployments by scheduling and managing patch/release
-                installations with third-party vendors and internal users to minimize downtime and improve operations
-              </li>
-              <li class="list-group-item ">Modernized legacy Clipper application by migrating business logic to SQL
-                Server
-                2012 using stored procedures,functions, views, and SQL jobs, enabling faster sales data access and
-                greater
-                reporting flexibility
-              </li>
-              <li class="list-group-item ">Administered SQL Server databases including user access management, query
-                performance tuning, backup/recovery, and business intelligence reporting using MS SQL Server 2012,
-                T-SQL,
-                SSRS, SSIS, SSAS, and SQL Server
-                Management Studio
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">.Net Developer Universal Drug Store Health Ltd., Winnipeg, MB</h5>
-            <h6 class="card-subtitle text-muted">2015 Nov – 2019 Apr</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item ">
-                Automated drug data transformation process by developing SQL Server Integration Services (SSIS) packages
-                with
-                T-SQL and Regular Expressions, reducing processing time from 8 hours to 1 hour in MS SQL Server </li>
-              <li class="list-group-item ">
-                Investigated and resolved software issues by performing root cause analysis, defining solutions and
-                workarounds,
-                and testing changes using VB.NET, C#.NET, JavaScript, jQuery, HTML, CSS, VBA, and browser developer
-                tools
-                to
-                support business objectives</li>
-              <li class="list-group-item ">Enhanced customer engagement by improving sales and order status email
-                templates using PHP and Laravel framework
-                on Ubuntu servers, managed with Git and VS Code</li>
-              <li class="list-group-item ">
-                Established organization-wide source code management system by implementing Git repositories on Ubuntu
-                servers
-                using SourceTree, enabling version control, code quality management, and release tracking
-              </li>
-              <li class="list-group-item ">
-                Administered multiple Ubuntu servers hosting web applications and source control, managing Git, PHP,
-                Laravel,
-                MySQL via SSH and CLI; applied OS and software updates, managed storage, and troubleshot issues to
-                maintain uptime
-                and reduce security risks
-              </li>
-              <li class="list-group-item ">
-                Maintained internet and intranet websites supporting business operations and sales using DNN Platform,
-                Microsoft
-                IIS, ASP.NET Web Forms, MySQL, and Visual Studio</li>
-              <li class="list-group-item ">Developed custom business reports using MS Access, SQL Server Reporting
-                Services (SSRS), T-SQL, MS SQL Server,
-                and SSIS to support data analysis and decision-making</li>
-              <li class="list-group-item ">Integrated web applications and services with third-party APIs using VBA,
-                VB.NET, HTTP, REST, and Postman to
-                automate workflows and improve data exchange</li>
-              <li class="list-group-item ">Re-engineered internal MS Access application by migrating to ASP.NET Web
-                Forms
-                with VB.NET, Entity Framework,
-                LINQ, and REST APIs, improving user experience and workflow efficiency; implemented testing with NUnit
-                and
-                Postman</li>
-              <li class="list-group-item ">Modernized customer-facing e-commerce site by migrating Universal Drug Store
-                from ASP.NET Web Forms to
-                AngularJS, improving user interface and sales performance</li>
-              <li class="list-group-item ">Automated financial data integration by developing QuickBooks Enterprise API
-                connector using VBA, HTTP, and REST
-                to import sales data from order tracking application</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Service Information Developer Hewlett Packard Company of Canada, Winnipeg, MB</h5>
-            <h6 class="card-subtitle text-muted">2011 Oct - 2015 Mar</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item ">Automated SQL data patch deployment process by developing Unix shell scripts
-                with VI and T-SQL, increasing
-                deployment capacity from 1 to 20 patches daily and reducing manual effort</li>
-              <li class="list-group-item ">Analyzed business requirements and designed technical solutions to meet
-                client
-                objectives using T-SQL, C#,
-                VB.NET, Entity Framework, LINQ, and UML for system modeling and implementation</li>
-              <li class="list-group-item ">Maintained system stability through root cause analysis, troubleshooting, and
-                development of SQL data patch
-                automation scripts using Unix shell scripting, VI, Sybase, and T-SQL for complex database queries</li>
-              <li class="list-group-item ">Managed full Software Development Life Cycle (SDLC) following Agile Development methodology; performed test planning, build management, and multi-environment deployments using HP Quality Center, Microsoft
-                Application Lifecycle Management (ALM), InstallShield, and UML</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
-        <div class="card w-75 p-4 margin-top-2">
-          <h5 class="text-start fw-bold">Education and Training</h5>
-        </div>
-       <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">ompleted 60 Credits of an Applied Computer Science Major, University of Winnipeg</h5>
-            <h6 class="card-subtitle text-muted">2003 - 2007</h6>
-            <h7>Relevant Courses</h7>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Computer Based Systems</li>
-              <li class="list-group-item">Data Structures And Algorithm</li>
-              <li class="list-group-item">Requirements Analysis & Design</li>
-              <li class="list-group-item">Software Design</li>
-              <li class="list-group-item">Intro. to Internet Programming</li>
-              <li class="list-group-item">Business and Management Statistics</li>
-              <li class="list-group-item">Relational Database Application Development</li>
-              <li class="list-group-item">Unix</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Certificates in Software Development Certificate – PowerBuilder from Red River College, Winnipeg, MB</h5>
-            <h6 class="card-subtitle text-muted">2001</h6>
-                        
-          </div>
-        </div>
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Computer Analyst and Programmer Diploma, Red River College, Winnipeg, MB</h5>
-            <h6 class="card-subtitle text-muted">1997</h6>
-                        
-          </div>
-        </div>
-        
-        <div class="card w-75 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Pluralsight</h5>
-            <h6 class="card-subtitle text-muted">2025-2026</h6>
+        </section>
 
-              <a href="https://www.pluralsight.com/profile/andrea-kaplen" class="card-link">Pluralsight Profile</a>
+        <section class="tab-pane fade" id="skills-pane" role="tabpanel" aria-labelledby="skills-tab" tabindex="0">
+          <div class="content-card">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row g-4">
+              <div class="col-md-6 col-xl-4">
+                <div class="skill-group">
+                  <h3>Frontend</h3>
+                  <div class="pill-list">
+                    <span class="skill-pill">Angular (v12-21)</span>
+                    <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">RxJS</span>
+                    <span class="skill-pill">Signals</span>
+                    <span class="skill-pill">JavaScript</span>
+                    <span class="skill-pill">HTML/CSS</span>
+                    <span class="skill-pill">ASP.NET Core MVC</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="skill-group">
+                  <h3>Backend</h3>
+                  <div class="pill-list">
+                    <span class="skill-pill">C#</span>
+                    <span class="skill-pill">ASP.NET Core Web API</span>
+                    <span class="skill-pill">.NET Framework</span>
+                    <span class="skill-pill">Entity Framework</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">VB.NET</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="skill-group">
+                  <h3>Database</h3>
+                  <div class="pill-list">
+                    <span class="skill-pill">MS SQL Server</span>
+                    <span class="skill-pill">DB2</span>
+                    <span class="skill-pill">MySQL</span>
+                    <span class="skill-pill">T-SQL</span>
+                    <span class="skill-pill">SSIS</span>
+                    <span class="skill-pill">SSRS</span>
+                    <span class="skill-pill">SSAS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-6">
+                <div class="skill-group">
+                  <h3>AI, DevOps, and Tools</h3>
+                  <div class="pill-list">
+                    <span class="skill-pill">Azure DevOps</span>
+                    <span class="skill-pill">GitLab CI/CD</span>
+                    <span class="skill-pill">Git</span>
+                    <span class="skill-pill">Octopus Deploy</span>
+                    <span class="skill-pill">TFS</span>
+                    <span class="skill-pill">Jira</span>
+                    <span class="skill-pill">Docker</span>
+                    <span class="skill-pill">GitHub Actions</span>
+                    <span class="skill-pill">GitHub Pages</span>
+                    <span class="skill-pill">GitHub CLI</span>
+                    <span class="skill-pill">VS Code</span>
+                    <span class="skill-pill">GitHub Copilot</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-6">
+                <div class="skill-group">
+                  <h3>Cloud and Platforms</h3>
+                  <div class="pill-list">
+                    <span class="skill-pill">Microsoft Dynamics 365</span>
+                    <span class="skill-pill">Power Platform</span>
+                    <span class="skill-pill">SharePoint</span>
+                    <span class="skill-pill">Azure App Services</span>
+                    <span class="skill-pill">Azure Functions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="links-tab-pane" role="tabpanel" aria-labelledby="links-tab" tabindex="0">
-         <a href="https://www.linkedin.com/in/andrea3779/">Linked Profile</a>
-        <a href="https://github.com/andreak3779">GitHub</a>
+        </section>
+
+        <section class="tab-pane fade" id="experience-pane" role="tabpanel" aria-labelledby="experience-tab"
+          tabindex="0">
+          <div class="content-card">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <article class="experience-entry">
+              <div class="experience-heading">
+                <div>
+                  <h3>Professional Development &amp; Portfolio Building</h3>
+                  <p class="experience-meta">2025 May – Present</p>
+                </div>
+              </div>
+              <ul class="detail-list">
+                <li>Developed expertise in Angular v17-v21 including RxJS, Signals, Angular CLI, testing, and reactive programming through Pluralsight training and hands-on code sample development.</li>
+                <li>Gaining skills with Azure Dev Ops, App Services, Azure Functions, and Azure SQL Database.</li>
+                <li>Advanced Python programming skills with venv, pytest, and approvaltests through Pluralsight courses and Exercism coding exercises.</li>
+                <li>Leveraged GitHub Copilot as an AI-assisted development tool for code generation, code reviews, documentation, and code quality improvement.</li>
+                <li>Expanded technical portfolio on GitHub with projects demonstrating proficiency in GitHub DevOps workflows, Angular v17+, C#, and ASP.NET Core 9.</li>
+                <li>Enhanced leadership, mentoring, and communication skills through professional development training.</li>
+              </ul>
+            </article>
+
+            <article class="experience-entry">
+              <div class="experience-heading">
+                <div>
+                  <h3>Senior Full Stack Developer</h3>
+                  <p class="experience-company">Johnston Group, Winnipeg, MB Hybrid</p>
+                </div>
+                <p class="experience-meta">2022 Oct – May 2025</p>
+              </div>
+              <ul class="detail-list">
+                <li>Participated in Agile/Scrum development using Jira for sprint planning and story pointing; engaged in daily scrums and sprint reviews with cross-functional teams.</li>
+                <li>Built front-end components with Angular (v12-v14), TypeScript, RxJS, and Angular Material; and deployed via Docker and nginx.</li>
+                <li>Developed RESTful APIs using ASP.NET Core, C#, and Entity Framework with LINQ to query DB2 databases, enhancing performance.</li>
+                <li>Modernized quote management system by migrating from legacy ASP.NET to Angular 12; implemented JWT authentication and layered services with C#, Linq, Entity Framework and DB2.</li>
+                <li>Created unit and integration tests using xUnit and Moq to ensure code quality and reliability.</li>
+                <li>Diagnosed and resolved production issues using browser dev tools, logz.io, DB2 queries, and .NET debugging tools.</li>
+                <li>Reduced new developer onboarding time by improving technical documentation and guides in Confluence.</li>
+                <li>Maintained legacy WinForms application (JG Admin) using C# and .NET 4.8 for bug fixes and report generation.</li>
+                <li>Conducted code reviews and managed CI/CD deployments through GitLab pipelines.</li>
+              </ul>
+            </article>
+
+            <article class="experience-entry">
+              <div class="experience-heading">
+                <div>
+                  <h3>Software Developer</h3>
+                  <p class="experience-company">Price Industries Ltd., Winnipeg, MB Hybrid</p>
+                </div>
+                <p class="experience-meta">2019 Sept – 2022 Oct</p>
+              </div>
+              <ul class="detail-list">
+                <li>Enhanced quality control issue tracking application by implementing improvements to Power Platform Canvas App with Power Automate workflows and SharePoint/M365 integration.</li>
+                <li>Maintained and supported Price's All-In-One sales engineering system, a desktop application built with C#, WPF, .NET 4.8, Entity Framework, and LINQ, hosted on Azure VMs with TFS source control.</li>
+                <li>Developed API integrations connecting Microsoft Dynamics 365 CRM and HubSpot to Price's All-In-One system using C# .NET Core, REST, HTTP, JSON, JWT, Dataverse, MS Graph, and SharePoint Online.</li>
+                <li>Coordinated release management by managing change requests and deploying releases through CI/CD pipelines using Azure DevOps Pipeline, Octopus, Git, and TFS.</li>
+                <li>Managed SharePoint sites for project collaboration and internal communications using M365, SharePoint, MS Teams, and PowerShell.</li>
+                <li>Participated in Agile development with cross-functional, geographically dispersed members through MS Teams, SharePoint, and Azure DevOps Boards.</li>
+                <li>Documented system architecture by analyzing and mapping data flows across Power Platform Apps, SharePoint Online Sites, and Power Automate workflows.</li>
+              </ul>
+            </article>
+
+            <article class="experience-entry">
+              <div class="experience-heading">
+                <div>
+                  <h3>Programmer / System Analyst</h3>
+                  <p class="experience-company">Paul’s Hauling, Winnipeg, MB Onsite</p>
+                </div>
+                <p class="experience-meta">2019 May – 2019 Aug</p>
+              </div>
+              <ul class="detail-list">
+                <li>Gathered business requirements and developed reports using SSRS, T-SQL, and MS SQL Server 2012; performed data analysis and collaborated with the Trimble vendor to resolve IT issues.</li>
+                <li>Coordinated software deployments by scheduling and managing patch and release installations with third-party vendors and internal users.</li>
+                <li>Modernized a legacy Clipper application by migrating business logic to SQL Server 2012 using stored procedures, functions, views, and SQL jobs.</li>
+                <li>Administered SQL Server databases including access management, performance tuning, backup and recovery, and business intelligence reporting.</li>
+              </ul>
+            </article>
+
+            <article class="experience-entry">
+              <div class="experience-heading">
+                <div>
+                  <h3>.Net Developer</h3>
+                  <p class="experience-company">Universal Drug Store Health Ltd., Winnipeg, MB Onsite</p>
+                </div>
+                <p class="experience-meta">2015 Nov – 2019 Apr</p>
+              </div>
+              <ul class="detail-list">
+                <li>Automated drug data transformation by developing SSIS packages with T-SQL and regular expressions, reducing processing time from 8 hours to 1 hour.</li>
+                <li>Investigated and resolved software issues through root cause analysis, testing, and implementation using VB.NET, C#.NET, JavaScript, jQuery, HTML, CSS, VBA, and browser developer tools.</li>
+                <li>Enhanced customer engagement by improving sales and order status email templates using PHP and Laravel on Ubuntu servers.</li>
+                <li>Established organization-wide source control by implementing Git repositories on Ubuntu servers using SourceTree.</li>
+                <li>Administered Ubuntu servers hosting web applications and source control, managing Git, PHP, Laravel, and MySQL through SSH and CLI.</li>
+                <li>Maintained internet and intranet websites using DNN Platform, Microsoft IIS, ASP.NET Web Forms, MySQL, and Visual Studio.</li>
+                <li>Developed custom business reports using MS Access, SSRS, T-SQL, MS SQL Server, and SSIS.</li>
+                <li>Integrated web applications and services with third-party APIs using VBA, VB.NET, HTTP, REST, and Postman.</li>
+                <li>Re-engineered an internal MS Access application by migrating it to ASP.NET Web Forms with VB.NET, Entity Framework, LINQ, and REST APIs.</li>
+                <li>Modernized the customer-facing e-commerce site by migrating Universal Drug Store from ASP.NET Web Forms to AngularJS.</li>
+                <li>Automated financial data integration by developing a QuickBooks Enterprise API connector using VBA, HTTP, and REST.</li>
+              </ul>
+            </article>
+
+            <article class="experience-entry mb-0">
+              <div class="experience-heading">
+                <div>
+                  <h3>Service Information Developer</h3>
+                  <p class="experience-company">Hewlett Packard Company of Canada, Winnipeg, MB</p>
+                </div>
+                <p class="experience-meta">2011 Oct – 2015 Mar</p>
+              </div>
+              <ul class="detail-list">
+                <li>Automated SQL data patch deployment by developing Unix shell scripts with VI and T-SQL, increasing deployment capacity from 1 to 20 patches daily.</li>
+                <li>Analyzed business requirements and designed technical solutions using T-SQL, C#, VB.NET, Entity Framework, LINQ, and UML.</li>
+                <li>Maintained system stability through root cause analysis, troubleshooting, and automation scripts for Sybase and T-SQL workloads.</li>
+                <li>Managed SDLC activities including test planning, build management, and multi-environment deployments using HP Quality Center, Microsoft ALM, InstallShield, and UML.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-pane fade" id="education-pane" role="tabpanel" aria-labelledby="education-tab"
+          tabindex="0">
+          <div class="content-card">
+            <h2 class="section-title">Education and Training</h2>
+
+            <div class="education-entry">
+              <h3>Completed 60 Credits of an Applied Computer Science Major</h3>
+              <p class="experience-company">University of Winnipeg</p>
+              <p class="experience-meta">2003 – 2007</p>
+              <p class="subsection-label">Relevant Courses</p>
+              <ul class="detail-list compact-list">
+                <li>Computer Based Systems</li>
+                <li>Data Structures and Algorithm</li>
+                <li>Requirements Analysis &amp; Design</li>
+                <li>Software Design</li>
+                <li>Intro. to Internet Programming</li>
+                <li>Business and Management Statistics</li>
+                <li>Relational Database Application Development</li>
+                <li>Unix</li>
+              </ul>
+            </div>
+
+            <div class="education-entry">
+              <h3>Computer Analyst and Programmer Diploma</h3>
+              <p class="experience-company">Red River College, Winnipeg</p>
+            </div>
+
+            <div class="education-entry">
+              <h3>Professional Training</h3>
+              <p class="experience-company">Pluralsight, 2025 – 2026</p>
+              <p class="mb-2">Completed courses on Azure, Python, Angular 17-21, ASP.NET Core, GitHub, testing, and communication skills.</p>
+              <a href="https://www.pluralsight.com/profile/andrea-kaplen" target="_blank" rel="noopener">View Pluralsight Profile</a>
+              <div id="pluralsight-courses" class="mt-4" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </main>
-  <footer class="mt-5">
-    <div class="container-fluid">
-      <div class="row fs-6">
-        <div class="col-sm-6 text-start">Andrea Kaplen
-        </div>
-        <div class="col-6 text-center">
-          Technology expert who solves business problems
-        </div>
-      </div>
-      <div class="row fs-6">
-        <div class="col-3">
-          <a href="mailto:andreakaplen1973@gmail.com">
-            andreakaplen1973@gmail.com
-          </a>
-        </div>
-        <div class="col-3">
-          <a href="tel:+2049517816">(204) 951-7816</a>
-        </div>
-        <div class="col-3">
-          <a href="https://www.linkedin.com/in/andrea3779/">Linked Profile</a>
-        </div>
-        <div class="col-3">
-          <a href="https://github.com/andreak3779">GitHub</a>
-        </div>
-      </div>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between gap-2">
+      <p class="mb-0">Andrea Kaplen</p>
+      <p class="mb-0">Technology expert who solves business problems</p>
     </div>
-
   </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
