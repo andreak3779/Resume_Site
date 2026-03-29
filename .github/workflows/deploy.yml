@@ -41,6 +41,3 @@ jobs:
       - name: Deploy GitHub Pages site
         id: deployment
         uses: actions/deploy-pages@v5.0.0
-         with:
-          # Upload only the static resume site
-          path: './site'
