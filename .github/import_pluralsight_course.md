@@ -31,23 +31,31 @@ Courses are automatically classified by searching the course name for skill keyw
 
 1. **Azure** — Any Azure service or Azure-related course
 2. **Microsoft Entra** — Identity, directory, and Entra ID courses
-3. **GitHub Copilot** — GitHub Copilot and AI coding tools
-4. **Python** — Python programming courses
-5. **REST** — REST API and REST principles
-6. **Angular** — Angular framework courses
-7. **ASP.NET** — ASP.NET Core and .NET web development
-8. **React** — React framework courses
-9. **Communications** — Fallback for all other courses (soft skills, DevOps, frameworks not listed, etc.)
+3. **GitHub Copilot** — GitHub Copilot and AI coding tools (e.g., "with GitHub Copilot")
+4. **API** — API design, security, testing, and REST API practices (e.g., course names containing "API" or "RESTful")
+5. **DevOps** — Docker, Kubernetes, PowerShell, and infrastructure automation
+6. **GitHub** — GitHub Actions workflows (but NOT GitHub Copilot—see rule 3)
+7. **Python** — Python programming courses
+8. **Angular** — Angular framework courses
+9. **ASP.NET** — ASP.NET Core and .NET web development
+10. **React** — React framework courses
+11. **Communications** — Fallback for all other courses (soft skills, frameworks not listed, general education, etc.)
 
 ### Classification Examples
 - "Azure Monitoring Fundamentals" matches "Azure" → skill: `Azure`
+- "API Security Practices" matches "API" → skill: `API`
+- "GitHub Actions: The Big Picture" matches "GitHub" (not Copilot) → skill: `GitHub`
+- "Getting Started with Docker" matches "DevOps" (Docker) → skill: `DevOps`
+- "Learning the PowerShell Language" matches "DevOps" (PowerShell) → skill: `DevOps`
+- "GitHub Copilot Fundamentals: AI Agents" matches "GitHub Copilot" (before "GitHub") → skill: `GitHub Copilot`
 - "Angular Fundamentals" matches "Angular" → skill: `Angular`
-- "Designing RESTful Web APIs" matches "REST" → skill: `REST`
 - "Bootstrap 5: Fundamentals" matches none → skill: `Communications`
 
 ### First-Match Rule
 If a course name contains multiple skill keywords, assign the **first match** in the priority order above.
-Example: "ASP.NET Core with Azure" matches both "ASP.NET" and "Azure", but "Azure" comes first in the priority list, so skill: `Azure`.
+Example: "Creating Developer Documentation with GitHub Copilot" matches both "GitHub Copilot" and "GitHub", but "GitHub Copilot" comes first (rule 3 vs rule 6), so skill: `GitHub Copilot`.
+
+**Important:** When evaluating "GitHub" matches, check for "GitHub Copilot" first. Only assign "GitHub" skill if the course is about GitHub Actions, workflows, or general GitHub (not AI coding tools).
 
 ## Adding New Courses
 
@@ -104,10 +112,11 @@ If you need to reclassify a course (change its skill):
 
 1. Open `data/completed_courses_with_type.json`
 2. Find the course entry by name
-3. Update the `pluralsight_course_skill` field
+3. Update the `pluralsight_course_skill` field to one of the recognized skills (see Skill Classification Rules)
 4. Save and validate JSON
+5. Optionally sort the file by skill (see Sorting Courses below)
 
-**Example:** Move "Bootstrap 5: Fundamentals" from "Communications" to a new "Frontend" category:
+**Example:** Reclassify "Bootstrap 5: Fundamentals" if a new skill category is created:
 ```json
 {
   "pluralsight_course_name": "Bootstrap 5: Fundamentals",
@@ -118,6 +127,41 @@ If you need to reclassify a course (change its skill):
 ```
 
 After updating, the education page will automatically regroup and display courses under the new skill.
+
+## Sorting Courses
+
+Keep the JSON file organized by sorting all courses by skill (alphabetically), then by course name within each skill:
+
+```bash
+cd site/data && python3 << 'EOF'
+import json
+
+with open('completed_courses_with_type.json', 'r') as f:
+    courses = json.load(f)
+
+sorted_courses = sorted(courses, key=lambda x: (x['pluralsight_course_skill'], x['pluralsight_course_name']))
+
+with open('completed_courses_with_type.json', 'w') as f:
+    json.dump(sorted_courses, f, indent=2)
+
+print(f"Sorted {len(sorted_courses)} courses by skill")
+EOF
+```
+
+Current skill count (as of 2026-03-29):
+- API: 3 courses
+- ASP.NET: 4 courses
+- Angular: 8 courses
+- Azure: 35 courses
+- Communications: 13 courses
+- DevOps: 5 courses
+- GitHub: 3 courses
+- GitHub Copilot: 19 courses
+- Microsoft Entra: 1 course
+- Python: 12 courses
+- React: 4 courses
+- REST: 1 course
+**Total: 108 courses**
 
 ## Display and Rendering
 
@@ -157,12 +201,14 @@ https://app.pluralsight.com/library/courses/{slug}
 - Remove leading/trailing hyphens
 
 **URL Examples:**
-| Course Name | Generated URL |
-|---|---|
-| Azure Monitoring Fundamentals | `https://app.pluralsight.com/library/courses/azure-monitoring-fundamentals` |
-| What's New in React 19 | `https://app.pluralsight.com/library/courses/whats-new-in-react-19` |
-| C++/CLI Advanced | `https://app.pluralsight.com/library/courses/ccli-advanced` |
-| ASP.NET Core: Big Picture | `https://app.pluralsight.com/library/courses/aspnet-core-big-picture` |
+| Course Name | Generated URL | Skill |
+|---|---|---|
+| Azure Monitoring Fundamentals | `https://app.pluralsight.com/library/courses/azure-monitoring-fundamentals` | Azure |
+| API Security Practices | `https://app.pluralsight.com/library/courses/api-security-practices` | API |
+| GitHub Actions: The Big Picture | `https://app.pluralsight.com/library/courses/github-actions-the-big-picture` | GitHub |
+| Getting Started with Docker | `https://app.pluralsight.com/library/courses/getting-started-with-docker` | DevOps |
+| What's New in React 19 | `https://app.pluralsight.com/library/courses/whats-new-in-react-19` | React |
+| ASP.NET Core: Big Picture | `https://app.pluralsight.com/library/courses/aspnet-core-big-picture` | ASP.NET |
 
 ## Validation Checklist
 
@@ -181,22 +227,43 @@ Before committing course data changes:
 
 | File | Purpose |
 |---|---|
-| `data/completed_courses_with_type.json` | Source data for all Pluralsight courses |
-| `scripts/index.js` | Dynamic rendering logic |
-| `index.html` | Container element: `<div id="pluralsight-courses">` |
-| `styles/style.css` | Course list styling and layout |
-| `.github/session-skill-tracking.md` | Session notes and implementation details |
+| `site/data/completed_courses_with_type.json` | Source data for all Pluralsight courses (sorted by skill) |
+| `site/scripts/index.js` | Dynamic rendering logic with collapsable skill groups |
+| `site/index.html` | Education section with container: `<div id="pluralsight-courses">` |
+| `site/styles/style.css` | Course list styling, collapsable buttons, and layout |
+| `.github/import_pluralsight_course.md` | This file — course management workflow and classification rules |
 
 ## Tips for Future Maintenance
 
-1. **Batch updates:** When adding multiple courses, do bulk edits to the JSON file rather than one-by-one for efficiency
-2. **Skill category growth:** If you add new skill categories (e.g., "Kubernetes", "Go"), update the classification rules priority list and the JavaScript grouping logic
+1. **Batch updates:** When adding multiple courses, do bulk edits to the JSON file rather than one-by-one for efficiency. Use the sorting script to keep the file organized.
+2. **Skill category growth:** If you add new skill categories (e.g., "Kubernetes", "Go", "Docker Specialized"), update:
+   - This classification rules priority list (in this file)
+   - The JavaScript grouping logic (automatically sorts skills alphabetically in `scripts/index.js`)
+   - Re-sort the JSON file using the sorting script
 3. **URL verification:** Periodically verify URLs by spot-checking courses—if a URL returns 404, update the slug
-4. **Database export:** You can export this JSON for external reporting tools or resume builders that consume Pluralsight data
-5. **Filtering:** If the display grows large, consider adding a filter/search feature to the UI using the skill or type fields
+4. **Collapsable sections:** Course skill groups display as collapsable sections with chevron icons. These expand/collapse via Bootstrap's collapse component.
+5. **Database export:** You can export the sorted JSON for external reporting tools or resume builders that consume Pluralsight data
+6. **Performance:** With 108+ courses, the UI uses collapsable sections to minimize scrolling. Monitor performance if the dataset grows beyond 200 courses.
+
+## Recent Changes (Session 2026-03-29)
+
+### New Skills Added
+- **API** — Courses with "API" in the name (API Security Practices, API Testing Strategies, Designing RESTful Web APIs)
+- **DevOps** — Docker and PowerShell courses (Getting Started with Docker, Docker and Kubernetes: The Big Picture, and 3 PowerShell courses)
+- **GitHub** — GitHub Actions workflows (Consuming GitHub Actions Workflows, Authoring and Maintaining GitHub Actions Workflows, GitHub Actions: The Big Picture)
+
+### Courses Reclassified
+- Moved courses with "API" from Communications → API skill
+- Moved courses with "GitHub Actions" from Communications → GitHub skill (kept GitHub Copilot as separate skill)
+- Moved courses with "Docker" and "PowerShell" from Communications → DevOps skill
+- Moved "Getting Started on Prompt Engineering with Generative AI" from Communications → GitHub Copilot skill
+
+### File Sorts
+- All 108 courses sorted by skill (alphabetically), then by course name within each skill
+- Collapsable skill sections added to Education page display (via `scripts/index.js`)
 
 ## Related Documentation
 
-- Session notes: `.github/session-skill-tracking.md`
 - Copilot instructions: `.github/copilot-instructions.md`
 - Resume data source: `data/Master_Resume.md`
+- Resume site structure: `README.md`

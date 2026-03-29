@@ -112,12 +112,27 @@ function createSkillGroup(skillName, typeGroups) {
 		totalInSkill += courses.length;
 	});
 
-	const heading = document.createElement('h4');
-	heading.className = 'course-group-title';
-	heading.textContent = `${skillName} (${totalInSkill})`;
+	// Create unique ID for this skill group
+	const skillId = `collapse-${skillName.replace(/\s+/g, '-').toLowerCase()}`;
+
+	// Create collapsible button/heading
+	const button = document.createElement('button');
+	button.className = 'course-group-button';
+	button.setAttribute('type', 'button');
+	button.setAttribute('data-bs-toggle', 'collapse');
+	button.setAttribute('data-bs-target', `#${skillId}`);
+	button.setAttribute('aria-expanded', 'true');
+	button.setAttribute('aria-controls', skillId);
+	button.innerHTML = `<span class="course-group-title-text">${skillName} (${totalInSkill})</span><span class="collapse-icon" aria-hidden="true"></span>`;
+
+	const heading = document.createElement('div');
+	heading.className = 'course-group-header';
+	heading.appendChild(button);
 
 	const list = document.createElement('ul');
-	list.className = 'list-group course-list';
+	list.id = skillId;
+	list.className = 'list-group course-list collapse show';
+	list.setAttribute('data-bs-parent', '');
 
 	// Process each type within this skill
 	Object.keys(typeGroups)

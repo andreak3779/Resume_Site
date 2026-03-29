@@ -30,6 +30,18 @@
     border: 1px solid #ccc !important;
   }
 
+  .experience-heading {
+    padding: 0 !important;
+    background: transparent !important;
+    border-left: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .experience-meta {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
   .hero-panel {
     padding: 0 !important;
     border: 0 !important;
@@ -62,18 +74,34 @@
     margin-top: 1.5rem;
   }
 
-  .experience-entry,
-  .education-entry,
-  .content-card,
-  .skill-group,
   .course-group,
-  .summary-pill {
-    page-break-inside: avoid;
-    break-inside: avoid;
+  .course-group-button {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .course-group-button {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .collapse-icon {
+    display: none !important;
+  }
+
+  .course-list {
+    display: block !important;
   }
 
   .site-footer {
     border-top: 0 !important;
     background: transparent !important;
+    padding: 1rem 0 !important;
+  }
+
+  .site-footer p {
+    color: #000 !important;
+    font-style: normal !important;
   }
 }
