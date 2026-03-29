@@ -326,6 +326,22 @@ a:focus-visible {
 .course-list .list-group-item {
     background: rgba(255, 255, 255, 0.85);
     border-color: rgba(74, 78, 105, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.course-list .course-name {
+    flex: 1;
+    min-width: 0;
+}
+
+.course-list .badge {
+    white-space: nowrap;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 .site-footer {
